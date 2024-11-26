@@ -4,90 +4,94 @@ header {
     color: #fff;
     padding: 10px 0;
 }
-nav ul{
+
+nav ul {
     list-style-type: none;
     padding: 0;
 }
-nav ul li{
+
+nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 10px;
 }
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size:larger;
+    font-size: larger;
 }
+
 footer {
     text-align: center;
     padding: 10px 0;
     background: #333;
     color: #fff;
-    font-size:larger;
+    font-size: larger;
 }
-#mydiv{
+
+#mydiv, #mydiv4 {
     background-color: #dda54a;
-    color: beige;
     margin-top: 40px;
     margin-bottom: 15px;
     padding: 10px;
     width: 100%;
     height: 200px;
-
 }
+
+#mydiv4 {
+    color: rgb(24, 24, 18);
+}
+
 table {
     width: 70%;
     height: 40%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(138, 217, 246, 0.656);
+    table-layout: fixed;
 }
-th {
-    width: 100px;
-    text-align: center;
-}
-td {
+
+th, td {
     text-align: center;
     vertical-align: top;
 }
-#mydiv2{
+
+#mydiv2, #mydiv3, #mydiv6, #mydiv7 {
     background-color: rgba(0, 0, 0, 0.81);
-    color: #dda54a ;
+    color: #dda54a;
     margin-top: 10px;
     margin-bottom: 15px;
-    margin-right: 50px;
     width: 50%;
     height: 300px;
+    padding: 20px;
 }
+
 #mydiv3 {
-    background-color: rgba(0, 0, 0, 0.81);
-    color: #dda54a ;
-    margin-top: 10px;
-    margin-bottom: 15px;
     margin-left: 50px;
-    width: 50%;
-    height: 300px
 }
-#mydiv4{
-    background-color: #dda54a ;
-    color: rgb(24, 24, 18);
-    margin-top: 40px;
-    margin-bottom: 15px;
-    margin-left: 0px;
-    padding: 10px;
-    width: 100%;
-    height: 200px
-}
-#mydiv5 {
+
+#mydiv5, #mydiv8 {
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: space-between; /* Adjust as needed */
-    margin: 20px; /* Add some margin */
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
 }
+
+#mydiv8 {
+    padding: 0 100px;
+    margin-bottom: 80px;
+}
+
 button {
     padding: 10px 20px;
-    background-color: #dda54a ;
+    background-color: #dda54a;
     color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
 #footer-container {
     display: flex;
     justify-content: space-between;
@@ -95,32 +99,150 @@ button {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 #footer-text {
     text-align: left;
 }
+
 #footer-links {
     flex: 4;
     display: flex;
     justify-content: center;
 }
+
 #footer-links ul {
-    display: flex; /* Display links in a row */
+    display: flex;
     gap: 5px;
     flex-direction: column;
     list-style: none;
 }
+
 #footer-social {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     gap: 20px;
 }
-#logo {
-    width: 100px;
-    height: auto;
-}
-#footer-logo {
-    width: 200px;
+
+#logo, #footer-logo {
     height: auto;
 }
 
+#logo {
+    width: 100px;
+}
+
+#footer-logo {
+    width: 200px;
+}
+
+#div1, #div2, #div3, #div4 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    background-color: bisque;
+    margin-bottom: 20px;
+}
+
+#section {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: rgb(22, 104, 146);
+}
+
+#section img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    color: darkblue;
+    justify-content: space-between;
+    margin: 0 70px;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 20px;
+    flex: 1;
+}
+
+#contact-form p {
+    margin: 5px 0;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form textarea {
+    height: 150px;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9f9524;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
+
+#map {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    flex: 1;
+    margin-top: 90px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #d3d3d3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #000;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    background-color: white;
+    justify-content: space-between;
+    height: 100px;
+}
+
+#div-icon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: -14px;
+    margin-right: 100px;
+}
