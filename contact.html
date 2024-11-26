@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size:larger;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            font-size:larger;
+        }
+        #contact {
+            display: flex;
+            flex-direction: row;
+            color: darkblue;
+            justify-content: space-between;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+        #contact-form p {
+            margin: 5px 0;
+           
+        }
+        #contact-form {
+            max-width: 400px;
+            margin: 20px;
+            margin-left: 70px;
+            flex: 1;
+        }
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #contact-form textarea {
+            width: 400px;
+            height: 150px;
+        }
+
+        #contact-form button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #9f9524;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #contact-form button:hover {
+            background-color: #555;
+        }
+
+        #map {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            flex: 1;
+            margin-top: 90px;
+        }
+        #info {
+            display: flex;
+           justify-content: space-between;
+           align-items: flex-start;
+           gap: 20px;
+        }
+        #icon {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%; 
+            background-color: #d3d3d3; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #000;
+        }
+        #top {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+            background-color: white;
+            justify-content: space-between;
+            height: 100px;
+        }
+        #div-icon {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin-top: -14px;
+            /* margin-top: 80px; */
+            margin-right: 100px;
+        }
+        #footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #footer-text {
+            text-align: left;
+        }
+        #footer-links {
+            flex: 4;
+            display: flex;
+            justify-content: center;
+        }
+        #footer-links ul {
+            display: flex; /* Display links in a row */
+            gap: 5px;
+            flex-direction: column;
+            list-style: none;
+        }
+        #footer-social {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+        }
+        #footer-logo {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body  style="margin: 0; padding: 0;">
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between;padding: 10px 100px;">
+            <img src="logo.png" alt="My Logo" id="logo">
+            <nav style="flex: 1; display: flex; justify-content: center;">
+                 <ul>
+                    <li>
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href="event.html"> Events </a>
+                    </li>
+                    <li>
+                        <a href="about.html"> About us </a>
+                    </li>
+                    <li>
+                        <a href="contact.html"> Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main style="background-color: rgba(34, 1, 1, 0.532)">
+        <div id="top">
+            <div>
+                <h1 style="float: left; margin-left: 80px; font-size: 50px; margin-top: 0;">Contact Us</h1>
+            </div>
+                <div id="div-icon">
+                    <div id="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div id="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                </div>
+        </div>
+        <div>
+        <div id="contact">
+            <p><strong>Location:</strong>Sacramento</p>
+            <p><strong>Email:</strong>info@ahlul-albayt-sc.org</p>
+            <p><strong>Phone:</strong>Coming Soon</p>
+        </div>
+
+   <div id="info">     
+        <div id="contact-form">
+            <form onsubmit="handleSubmit(event)">
+                <h1>Get in Touch</h1>
+                <p>Whether you have questions, seek guidance, or simply want to say hello, we welcome the opportunity to hear from you.</p>
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126923.15045987064!2d-121.57411880572114!3d38.58157195324332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808529d5f4fba9ff%3A0x1477f9ef57a2e7cb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1694619078467!5m2!1sen!2sus"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    </main>
+    <footer style="padding: 20px;">
+        <div id="footer-container">
+            
+            <!-- Left: Footer Text -->
+            <div id="footer-text">
+                <img src="logo.png" alt="My Logo" id="footer-logo">
+                <!-- <p>&copy; 2024 AHLU ALBAYT SACRAMENTO CENTER</p> -->
+            </div>
+    
+            <!-- Center: Footer Links -->
+            <nav id="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Right: Social Media Links -->
+            <div id="footer-social">
+                <a style="color:  #dda54a;" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
+                <a style="color:  #dda54a;" href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+ 
+        </div>
+        <hr>
+        <p style="font-size: small;">&copy; 2024 AHLU ALBAYT SACRAMENTO CENTER</p>
+    </footer>
+    <script>
+        // JavaScript function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Display the pop-up message
+            alert("Your message has been successfully submitted!");
+
+            // Optionally, you can reset the form after submission
+            document.getElementById("orderForm").reset();
+        }
+    </script>
+</body>
+</html>

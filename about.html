@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header {
+            text-align: center;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size:larger;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            font-size:larger;
+        }
+        #mydiv6 {
+            background-color: rgba(0, 0, 0, 0.81);
+            color: #dda54a ;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-right: 50px;
+            padding: 20px;
+            width: 50%;
+            height: 300px;
+        }
+        #mydiv7 {
+            background-color: rgba(0, 0, 0, 0.81);
+            color: #dda54a ;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-right: 50px;
+            padding: 20px;
+            width: 50%;
+            height: 300px;
+        }
+        #mydiv8 {
+            display: flex;
+            align-items: center; /* Vertically center */
+            justify-content: space-between; /* Adjust as needed */
+            margin: 20px; /* Add some margin */
+            padding: 0px 100px;
+            margin-bottom: 80px;
+
+        }
+        a {
+            color: #dda54a;
+            text-decoration: none;
+        }
+        #footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        #footer-text {
+            text-align: left;
+        }
+        #footer-links {
+            flex: 4;
+            display: flex;
+            justify-content: center;
+        }
+        #footer-links ul {
+            display: flex; /* Display links in a row */
+            gap: 5px;
+            flex-direction: column;
+            list-style: none;
+        }
+        #footer-social {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        #logo {
+            width: 100px;
+            height: auto;
+        }
+        #footer-logo {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body  style="margin: 0; padding: 0;">
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between;padding: 10px 100px;">
+            <img src="logo.png" alt="My Logo" id="logo">
+            <nav style="flex: 1; display: flex; justify-content: center;">
+                <ul>
+                    <li>
+                        <a href="index.html"> Home </a>
+                    </li>
+                    <li>
+                        <a href="event.html"> Events </a>
+                    </li>
+                    <li>
+                        <a href="about.html"> About us </a>
+                    </li>
+                    <li>
+                        <a href="contact.html"> Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <div style="padding: 0px 100px;">
+        <h1 style="text-align: center; padding-top: 20px;">About Us</h1>
+        <h1 style="margin-left: 10px; margin-bottom: 40px;">We are fortunate to receive tremendous support from our community, which plays a crucial role in advancing our mission.</h1>
+        <p>Driven by our commitment to faith, education, and community, we are actively working to address the needs of our growing congregation. Our current facility, while cherished, is limited in space and functionality. To realize our vision, we are raising funds to support the development of our new center. Together, we are committed to making this vision a reality
+        </p>
+        <div style="display: flex; flex-direction: row;">
+            <div id="mydiv6">
+                <h3>Our Mission</h3>
+                <h1>Our mission is to build a mosque, school, and community center that will serve as a beacon of faith and learning.</h1>
+            </div>
+            <div id="mydiv7">
+                <h3>Our Vision</h3>
+                <h1>We envision a future where our center is a cornerstone of our community, offering:
+                </h1>
+            </div>
+        </div>
+    </div>
+
+       <div>
+            <div style="padding: 0px 100px; margin-top: 80px;">
+                <h1>Every contribution, no matter the size, brings us closer to achieving our goals and creating a lasting impact for future generations.
+                </h1>
+                <p>Together, we are on the path to success</p>
+            </div>
+            <div id="mydiv8">
+                <button onclick="alert('Donation Page - Comming Soon')" style="background-color: #dda54a;">Donate</button>
+            </div>
+        </div>
+    </main>
+    <footer style="padding: 20px;">
+        <div id="footer-container">
+            
+            <!-- Left: Footer Text -->
+            <div id="footer-text">
+                <img src="logo.png" alt="My Logo" id="footer-logo">
+                <!-- <p>&copy; 2024 AHLU ALBAYT SACRAMENTO CENTER</p> -->
+            </div>
+    
+            <!-- Center: Footer Links -->
+            <nav id="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Right: Social Media Links -->
+            <div id="footer-social">
+                <a style="color:  #dda54a;" href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
+                <a style="color:  #dda54a;" href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a>
+            </div>
+ 
+        </div>
+        <hr>
+        <p style="font-size: small;">&copy; 2024 AHLU ALBAYT SACRAMENTO CENTER</p>
+    </footer>
+</body>
+</html>
