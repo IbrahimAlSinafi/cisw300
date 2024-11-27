@@ -27,46 +27,45 @@
             </nav>
         </div>
     </header>
-    <main style="background-color: rgba(34, 1, 1, 0.532)">
+    <main style="background-color: #e0e0e0">
         <div id="top">
             <div>
                 <h1 style="float: left; margin-left: 80px; font-size: 50px; margin-top: 0;">Contact Us</h1>
             </div>
-                <div id="div-icon">
-                    <div id="icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div id="icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+            <div id="div-icon">
+                <div id="icon">
+                    <i class="fas fa-phone"></i>
                 </div>
+                <div id="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+            </div>
         </div>
-        <div>
         <div id="contact">
-            <p><strong>Location:</strong>Sacramento</p>
-            <p><strong>Email:</strong>info@ahlul-albayt-sc.org</p>
-            <p><strong>Phone:</strong>Coming Soon</p>
+            <p><strong>Location:</strong><span id="location">Sacramento</span></p>
+            <p><strong>Email:</strong><span id="email">info@ahlul-albayt-sc.org</span></p>
+            <p><strong>Phone:</strong><span id="phone">Coming Soon</span></p>
         </div>
 
-   <div id="info">     
-        <div id="contact-form">
-            <form onsubmit="handleSubmit(event)">
-                <h1>Get in Touch</h1>
-                <p>Whether you have questions, seek guidance, or simply want to say hello, we welcome the opportunity to hear from you.</p>
-                <input type="text" name="first-name" placeholder="First Name" required>
-                <input type="text" name="last-name" placeholder="Last Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <div id="info">     
+            <div id="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <h1>Get in Touch</h1>
+                    <p>Whether you have questions, seek guidance, or simply want to say hello, we welcome the opportunity to hear from you.</p>
+                    <input type="text" name="first-name" placeholder="First Name" required>
+                    <input type="text" name="last-name" placeholder="Last Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126923.15045987064!2d-121.57411880572114!3d38.58157195324332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808529d5f4fba9ff%3A0x1477f9ef57a2e7cb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1694619078467!5m2!1sen!2sus"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
         </div>
-        <div id="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126923.15045987064!2d-121.57411880572114!3d38.58157195324332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808529d5f4fba9ff%3A0x1477f9ef57a2e7cb!2sSacramento%2C%20CA!5e0!3m2!1sen!2sus!4v1694619078467!5m2!1sen!2sus"
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
-        </div>
-    </div>
     </main>
     <footer style="padding: 20px;">
         <div id="footer-container">
@@ -74,7 +73,6 @@
             <!-- Left: Footer Text -->
             <div id="footer-text">
                 <img src="logo.png" alt="My Logo" id="footer-logo">
-                <!-- <p>&copy; 2024 AHLU ALBAYT SACRAMENTO CENTER</p> -->
             </div>
     
             <!-- Center: Footer Links -->
