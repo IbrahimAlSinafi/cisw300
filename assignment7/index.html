@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>Dessert Maker Order Form</title>
     <style>
-
         .info {
             max-width: 500px;
             margin: 20px auto;
@@ -63,27 +61,27 @@
 
             <div class="form-group">
                 <label for="last-name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required>
+                <input type="text" id="last-name" name="last-name" required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
             </div>
 
             <div class="form-group">
                 <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
             </div>
 
             <div class="form-group">
                 <label for="city">City:</label>
-                <input type="text" id="city" name="city" required>
+                <input type="text" id="city" name="city" required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
             </div>
 
             <div class="form-group">
                 <label for="state">State:</label>
-                <input type="text" id="state" name="state" maxlength="2" required>
+                <input type="text" id="state" name="state" maxlength="2" required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
             </div>
 
             <div class="form-group">
                 <label for="zip-code">Zip Code:</label>
-                <input type="text" id="zip-code" name="zip-code" maxlength="5" required>
+                <input type="text" id="zip-code" name="zip-code" maxlength="5" required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
             </div>
 
             <div>
@@ -109,19 +107,27 @@
             </div>
 
             <div class="form-group">
-                <label for="choose">Dipping Sauces:</label>
-                <select id="choose" name="choose" required>
-                    <option value="" disabled selected>Select a sauce</option>
-                    <option value="Hazelnut spread">Hazelnut Spread</option>
-                    <option value="Cookie butter">Cookie Butter</option>
-                    <option value="Pistachio">Pistachio</option>
-                    <option value="White Chocolate">White Chocolate</option>
-                </select>
+                <label for="choose">Dipping Sauces (Optional):</label>
+                <input type="checkbox" id="dipping-sauces-checkbox" name="dipping-sauces-checkbox" onchange="toggleSauces()">
+                <span>Would you like dipping sauces?</span>
+            </div>
+
+            <div id="dipping-sauces-group" style="display:none;">
+                <div class="form-group">
+                    <label for="choose">Select a dipping sauce:</label>
+                    <select id="choose" name="choose" onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)">
+                        <option value="" disabled selected>Select a sauce</option>
+                        <option value="Hazelnut spread">Hazelnut Spread</option>
+                        <option value="Cookie butter">Cookie Butter</option>
+                        <option value="Pistachio">Pistachio</option>
+                        <option value="White Chocolate">White Chocolate</option>
+                    </select>
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="message">Comments:</label>
-                <textarea id="message" name="message" placeholder="Your Message" maxlength="500" required></textarea>
+                <textarea id="message" name="message" placeholder="Your Message" maxlength="500" required required onmouseover="mouseOver(this)" onmouseout="removeMouseOver(this)"></textarea>
             </div>
 
             <!-- X-Credit: Replacing the Submit button with a graphic image (w1985051) -->
@@ -130,12 +136,30 @@
     </div>
 
     <script>
+        function mouseOver(element) {
+            element.style.backgroundColor = '#ccc';
+        }
+
+        function removeMouseOver(element) {
+            element.style.backgroundColor = 'white';
+        }
+
+        function toggleSauces() {
+            var saucesSection = document.getElementById('dipping-sauces-group');
+            var checkbox = document.getElementById('dipping-sauces-checkbox');
+            if (checkbox.checked) {
+                saucesSection.style.display = 'block';  // Show dropdown
+            } else {
+                saucesSection.style.display = 'none';  // Hide dropdown
+            }
+        }
+
         // JavaScript function to handle form submission
         function handleSubmit(event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Display the pop-up message
-            alert("Your orcers has been successfully submitted!");
+            alert("Your order has been successfully submitted!");
 
             // Optionally, you can reset the form after submission
             document.getElementById("orderForm").reset();
